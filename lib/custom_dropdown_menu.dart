@@ -738,7 +738,7 @@ class _CustomDropdownMenuState<TargetType>
                         focusForKeyboard: !canRequestFocus(),
                       );
                     },
-              onChanged: (_) {
+              onChanged: () {
                 controller.open();
                 setState(() {
                   filteredEntries = widget.dropdownMenuEntries;
@@ -1188,7 +1188,7 @@ class CustomDropdownMenuProperties {
   final TextEditingController controller;
   final void Function()? onEditingComplete;
   final void Function()? onTap;
-  final void Function(String value)? onChanged;
+  final void Function()? onChanged;
   final InputDecorationThemeData effectiveInputDecorationTheme;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
