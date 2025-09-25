@@ -753,7 +753,10 @@ class _CustomDropdownMenuState<TargetType>
               effectiveInputDecorationTheme: effectiveInputDecorationTheme,
             );
 
-            final Widget textField = widget.builder(context, properties);
+            final Widget textField = Builder(
+              key: _anchorKey,
+              builder: (context) => widget.builder(context, properties),
+            );
 
             final body = widget.expandedInsets != null
                 ? textField
