@@ -11,7 +11,7 @@ const double _kDefaultHorizontalPadding = 12;
 const double _kInputStartGap = 4;
 
 class CustomDropdownMenu<TargetType> extends StatefulWidget {
-  const CustomDropdownMenu.builder({
+  const CustomDropdownMenu({
     super.key,
     required this.builder,
     this.enabled = true,
